@@ -70,7 +70,12 @@ let currentQ = 0
 
 
 function renderQuestion() {
-    console.log(currentQ)
+    
+    //End quiz if last question reached
+    if (currentQ > questions.length -1) { 
+        endQuiz();
+        };
+
     const currentQuestion = questions[currentQ].question
 
     let questionTitle = document.getElementById('question-title');
@@ -109,9 +114,7 @@ function checkAnswer(selectedAnswer){
         if ( currentQ < questions.length) {
             currentQ++;
             renderQuestion();
-            } else {
-            endQuiz();
-            };
+            } 
     }
     
 
