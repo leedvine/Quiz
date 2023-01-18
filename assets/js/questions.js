@@ -8,8 +8,8 @@ let questions = [
     },
     {
         question: "What is question 2?",
-        choices: ["a", "b", "c", "d"],
-        answer: "c"
+        choices: ["1", "2", "3", "4"],
+        answer: "3"
     },
     {
         question: "What is question 3?",

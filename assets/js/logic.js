@@ -66,10 +66,11 @@ startButton.addEventListener('click', function () {
 
 // Show questions
 
-let currentQ = 0;
+let currentQ = 0
 
 
 function renderQuestion() {
+    console.log(currentQ)
     const currentQuestion = questions[currentQ].question
 
     let questionTitle = document.getElementById('question-title');
@@ -77,33 +78,44 @@ function renderQuestion() {
     questionTitle.textContent = currentQuestion
 
     let choicesContainer = document.getElementById('choices')
-
+choicesContainer.innerHTML = '' 
 
     for (let i = 0; i < questions[currentQ].choices.length; i++) {
 
         let answerButton = document.createElement('button')
         
-        answerButton.setAttribute("value",choices )
+        answerButton.setAttribute("value", questions[currentQ].choices[i]);
 
         answerButton.textContent = questions[currentQ].choices[i]
 
         answerButton.onclick = checkAnswer;
 
         choicesContainer.appendChild(answerButton)
+        
     }
 }
 
-// Check Answer and ammend score if wrong
+// Check Answer and ammend timer/score if wrong
 
-function checkAnswer() {
+function checkAnswer(selectedAnswer){
 
-    if (this.value == questions[currentQ].answer) {
+
+    if (selectedAnswer.target.value == questions[currentQ].answer) {
         timerSeconds -= 0;
     }
         else {
             timerSeconds -= 10;
         }
+        if ( currentQ < questions.length) {
+            currentQ++;
+            renderQuestion();
+            } else {
+            endQuiz();
+            };
     }
+    
+
+   
 
 
 
