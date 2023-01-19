@@ -46,7 +46,7 @@ function endQuiz() {
   finalScore.textContent = timerSeconds;
   clearTimeout(timerSeconds);
   hidden(resultText);
-  hidden(timeArea)
+  hidden(timeArea);
 }
 
 // Adds event listener to the start button

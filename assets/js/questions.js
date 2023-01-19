@@ -2,28 +2,28 @@
 
 let questions = [
     {
-        question: "What is question 1?",
-        choices: ["a", "b", "c", "d"],
-        answer: "b"
+        question: "What is Javascript?",
+        choices: ["Computer programming language", "A browser", "Musical Software", "All of the above"],
+        answer: "Computer programming language"
     },
     {
-        question: "What is question 2?",
-        choices: ["1", "2", "3", "4"],
-        answer: "3"
+        question: "What does NAN stand for?",
+        choices: ["Your gran", "Not a notion", "Not a Number", "Non of the above"],
+        answer: "Not a Number"
     },
     {
-        question: "What is question 3?",
-        choices: ["a", "b", "c", "d"],
-        answer: "d"
+        question: "How many values does a boolean have",
+        choices: ["2", "6", "8", "10"],
+        answer: "2"
     },
     {
-        question: "What is question 4?",
-        choices: ["a", "b", "c", "d"],
-        answer: "c"
+        question: "Which of the below is a type of loop",
+        choices: ["4", "Four", "Fore", "for"],
+        answer: "for"
     },
     {
-        question: "What is question 5?",
-        choices: ["a", "b", "c", "d"],
-        answer: "a"
+        question: "What means or?",
+        choices: ["!!", "||", "{}", "&&"],
+        answer: "||"
     }
 ];
