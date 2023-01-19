@@ -7,7 +7,7 @@ let questions = [
         answer: "Computer programming language"
     },
     {
-        question: "What does NAN stand for?",
+        question: "What does NaN stand for?",
         choices: ["Your gran", "Not a notion", "Not a Number", "Non of the above"],
         answer: "Not a Number"
     },
