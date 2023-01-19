@@ -1,88 +1,71 @@
-# Module 6 Challenge Web APIs: Code Quiz
+## Overview
 
-## Your Task
+Create an Javascript quiz wherby the user is presented with a set of questions and multiple choice answers. The user has 60 seconds (based around 12 seconds per question). If the user selects the correct answer the timer keeps on ticking down 1 second at a time. A wrong answer given will deduct 10 seconds immediatley from timer.
 
-As you proceed in your journey to becoming a front-end web developer, it’s likely that you’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding assessment is a combination of multiple-choice questions and interactive coding challenges. 
+The user should be given a message on screen showing whether question answered correctly or not. The quiz ends when either all 5 questions have been answered or the timer runs out.
 
-To help you become familiar with these tests and give you a chance to apply the skills from this module, this week’s challenge invites you to build a timed coding quiz with multiple-choice questions. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean, polished, and responsive user interface. This week’s coursework has taught you all the skills you need to succeed in this challenge.
+The end score is based on how many seconds remain after the final question.
 
+The player can enter initials to store their score and compare their previous scores against each other by clicking a High Score button.
 
-## User Story
-
-```
-AS A coding boot camp student
-I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
-SO THAT I can gauge my progress compared to my peers
-```
-
-## Acceptance Criteria
-
-Create a code quiz that contains the following requirements:
-
-* A start button that when clicked a timer starts and the first question appears.
- 
-  * Questions contain buttons for each answer.
-  * 
-  * When answer is clicked, the next question appears
-  * 
-  * If the answer clicked was incorrect then subtract time from the clock
-
-* The quiz should end when all questions are answered or the timer reaches 0.
-
-  * When the game ends, it should display their score and give the user the ability to save their initials and their score
-  
-## Mock-Up
-
-The following animation demonstrates the application functionality:
-
-![Animation of code quiz. Presses button to start quiz. Clicks the button for the answer to each question, displays if answer was correct or incorrect. Quiz finishes and displays high scores. User adds their intials, then clears their intials and starts over.](./assets/08-web-apis-challenge-demo.gif)
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+This app will run in the browser, and will feature Javascript, HTML and CSS.
 
 
-## Review
+### Screenshot showing example of intro/welcome screen
 
-You are required to submit BOTH of the following for review:
+![](./assets/images/Screenshot%202023-01-19%20at%2022.51.56.png)
+<br><br>
 
-* The URL of the functional, deployed application.
+### Screenshot showing question example
+![](./assets/images/Screenshot%202023-01-19%20at%2022.52.09.png)
+<br><br>
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+### Screenshot showing message displayed on answering question
+![](./assets/images/Screenshot%202023-01-19%20at%2022.52.34.png)
+<br><br>
 
----
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+### Screenshot showing final score
+![](./assets/images/Screenshot%202023-01-19%20at%2023.34.13.png)
+<br><br>
+
+### Links
+
+- Repo URL: https://github.com/leedvine/javascript-quiz
+<br><br>
+- Live Site URL: https://leedvine.github.io/javascript-quiz
+
+## My process
+
+### Built with
+
+- Use of Javascript variables, functions, For loops as well as maths and if conditions
+<br><br>
+### What I learned
+
+Using Javascript the HTML page can become fully interactive with the users choices defining various outcomes. Timers can be introduced to the screen and manipulated via user interaction to tic down faster (minus seconds on wrong answer).
+
+Storing information in local storage allows us to hold on to generated information and display it later. In this instance by storing and reproducing score data on screen.
+
+<br><br>
+### Useful resources
+<br><br>
+https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+<br><br>
+https://stackoverflow.com/questions/51041823/how-to-decrement-timer-value-in-js
+<br><br>
+https://www.w3schools.com/js/js_htmldom_html.asp
+<br><br>
+## Author
+  Lee Vine
+- GitHub - https://github.com/leedvine
+
+## Installation
+
+Simplest way to view the project is on GitHub pages here https://leedvine.github.io/javascript-quiz/
+
+You can also download the files to your local environment from Github here https://github.com/leedvine/javascript-quiz/ and right click the index file to open in browser.
+
+It is also possible to download from the above link and instal on any hosting owned by yourself. Note this should only be done on unused / clean hosting account 
+
+Installing in folders with the same name here can overwrite your existing files.
+

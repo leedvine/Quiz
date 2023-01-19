@@ -6,6 +6,7 @@ const questionArea = document.querySelector("#questions");
 const endScreen = document.querySelector("#end-screen");
 const finalScore = document.querySelector("#final-score");
 const resultText = document.querySelector("#feedback");
+const timeArea = document.querySelector(".timer")
 
 // The starting amount of seconds for timer
 let timerSeconds = 60;
@@ -45,6 +46,7 @@ function endQuiz() {
   finalScore.textContent = timerSeconds;
   clearTimeout(timerSeconds);
   hidden(resultText);
+  hidden(timeArea)
 }
 
 // Adds event listener to the start button
@@ -64,6 +66,8 @@ let currentQ = 0;
 //Show Question on screen
 
 function renderQuestion() {
+    console.log(questions.length + " question length")
+    console.log(currentQ + " currentQ")
   // do not run this function if last question already answered - instead end quiz
   quizFinish();
 
