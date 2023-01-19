@@ -50,6 +50,7 @@ function endQuiz() {
     hidden(questionArea)
     finalScore.textContent = timerSeconds;
     clearTimeout(timerSeconds);
+    hidden(resultText);
 }
 
 
@@ -69,12 +70,13 @@ startButton.addEventListener('click', function () {
 let currentQ = 0
 
 
+//Show Question on screen
+
 function renderQuestion() {
-    
-    //End quiz if last question reached
-    if (currentQ > questions.length -1) { 
-        endQuiz();
-        };
+
+    // do not run this function if last question already answered - instead end quiz
+quizFinish();
+
 
     const currentQuestion = questions[currentQ].question
 
@@ -83,7 +85,10 @@ function renderQuestion() {
     questionTitle.textContent = currentQuestion
 
     let choicesContainer = document.getElementById('choices')
-choicesContainer.innerHTML = '' 
+choicesContainer.innerHTML = ''
+
+
+// Create For loop to allow questions to populate and move to next in turn
 
     for (let i = 0; i < questions[currentQ].choices.length; i++) {
 
@@ -121,6 +126,13 @@ function checkAnswer(selectedAnswer){
             currentQ++;
             renderQuestion();
             } 
+    }
+
+    //End quiz if last question reached
+    function quizFinish(){
+    if (currentQ > questions.length -1) { 
+        endQuiz();
+        };
     }
     
 
