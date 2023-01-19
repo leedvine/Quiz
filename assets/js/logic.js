@@ -5,7 +5,7 @@ const initialScreen = document.querySelector("#start-screen");
 const questionArea = document.querySelector("#questions");
 const endScreen = document.querySelector("#end-screen");
 const finalScore = document.querySelector("#final-score");
-
+const resultText = document.querySelector("#feedback");
 
 
 
@@ -37,12 +37,11 @@ function countdown() {
 	if (timerSeconds > 0) {
 		setTimeout(countdown, 1000);
 	}
-    if (timerSeconds <= 0) {
+    if (timerSeconds < 1) {
+        timerSeconds = 0;
         endQuiz();
     }
-    if (timerSeconds <= 0) {
-        timerSeconds = 0;
-    }
+
 };
 
 // Reveal end screen and hide question area
@@ -50,6 +49,7 @@ function endQuiz() {
     reveal(endScreen);
     hidden(questionArea)
     finalScore.textContent = timerSeconds;
+    clearTimeout(timerSeconds);
 }
 
 
@@ -106,11 +106,17 @@ function checkAnswer(selectedAnswer){
 
 
     if (selectedAnswer.target.value == questions[currentQ].answer) {
+        resultText.textContent = "Last question answered correctly!";
+        reveal(resultText);
         timerSeconds -= 0;
     }
-        else {
-            timerSeconds -= 10;
-        }
+    if (selectedAnswer.target.value !== questions[currentQ].answer) {
+        resultText.textContent = "Last question answered incorrectly!";
+        reveal(resultText);
+        timerSeconds -= 10; 
+    }
+        
+        
         if ( currentQ < questions.length) {
             currentQ++;
             renderQuestion();
